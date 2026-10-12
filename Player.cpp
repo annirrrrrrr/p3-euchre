@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <assert.h>
-
+#include <algorithm>
 #include "Player.hpp"
 
 using namespace std;
@@ -147,6 +147,7 @@ class HumanPlayer : public Player{
     }
     //REQUIRES player has less than MAX_HAND_SIZE cards
     //EFFECTS  adds Card c to Player's hand
+
     void add_card(const Card &c) override{
         hand.push_back(c);
         sort(hand.begin(), hand.end());
