@@ -31,6 +31,8 @@ TEST(test_is_right_bower) {
 	ASSERT_FALSE(Card(JACK, DIAMONDS).is_right_bower(HEARTS));
 }
 
+/////
+
 TEST(test_is_left_bower) {
 	ASSERT_TRUE(Card(JACK, CLUBS).is_left_bower(SPADES));
 	ASSERT_FALSE(Card(JACK, SPADES).is_left_bower(SPADES));
