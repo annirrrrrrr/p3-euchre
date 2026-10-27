@@ -1,5 +1,6 @@
 #include "Pack.hpp"
 #include "unit_test_framework.hpp"
+#include <sstream>
 
 #include <iostream>
 
@@ -82,9 +83,9 @@ TEST(test_pack_shuffle_order) {
 
     // Original card positions after seven in-shuffles.
     const int positions[] = {
-        18, 12, 6, 0, 19, 13, 7, 1,
-        20, 14, 8, 2, 21, 15, 9, 3,
-        22, 16, 10, 4, 23, 17, 11, 5
+        16, 8, 0, 17, 9, 1, 18, 10,
+        2, 19, 11, 3, 20, 12, 4, 21,
+        13, 5, 22, 14, 6, 23, 15, 7
     };
 
     pack.shuffle();
@@ -113,7 +114,7 @@ TEST(test_pack_shuffle_resets_dealing) {
     pack.shuffle();
 
     ASSERT_FALSE(pack.empty());
-    ASSERT_EQUAL(pack.deal_one(), Card(NINE, DIAMONDS));
+    ASSERT_EQUAL(pack.deal_one(), Card(KING, CLUBS));
 
     for (int i = 1; i < 24; ++i) {
         pack.deal_one();

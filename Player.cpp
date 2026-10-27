@@ -180,7 +180,7 @@ class HumanPlayer : public Player{
     void add_and_discard(const Card &upcard) override {
         print_hand();
         cout << "Discard upcard: [-1]\n";
-        cout << "Human player " << name << ", please select a card to discard: \n";
+        cout << "Human player " << name << ", please select a card to discard:\n";
 
         int index;
         cin >> index;
